@@ -30,7 +30,7 @@ def main():
     try: 
         result = subprocess.run(command, capture_output=True, text=True)
     except FileNotFoundError:
-            print(f"Command not found: followed by {command[0]}")
+            print(f"Command not found: \"{command[0]}\"")
             sys.exit(1)
     try:        
         if result.returncode != 0:
